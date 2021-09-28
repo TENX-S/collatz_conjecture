@@ -1,0 +1,120 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'guess'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=guess",
+                    "--package=collatz_conjecture"
+                ],
+                "filter": {
+                    "name": "guess",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'guess'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=guess",
+                    "--package=collatz_conjecture"
+                ],
+                "filter": {
+                    "name": "guess",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'multi_threaded'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=multi_threaded",
+                    "--package=collatz_conjecture"
+                ],
+                "filter": {
+                    "name": "multi_threaded",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'multi_threaded'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=multi_threaded",
+                    "--package=collatz_conjecture"
+                ],
+                "filter": {
+                    "name": "multi_threaded",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'single_threaded'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=single_threaded",
+                    "--package=collatz_conjecture"
+                ],
+                "filter": {
+                    "name": "single_threaded",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'single_threaded'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=single_threaded",
+                    "--package=collatz_conjecture"
+                ],
+                "filter": {
+                    "name": "single_threaded",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

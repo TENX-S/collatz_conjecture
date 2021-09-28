@@ -1,3 +1,4 @@
+use mimalloc::MiMalloc;
 use num_bigint::{BigUint, ToBigUint};
 use num_integer::Integer;
 use num_iter::range;
@@ -6,6 +7,9 @@ use std::collections::HashSet;
 use std::env;
 use std::ops::Shr;
 use std::time::Instant;
+
+#[global_allocator]
+static GLOBAL: MiMalloc = MiMalloc;
 
 fn main() {
     let args = env::args().collect::<Vec<_>>();
